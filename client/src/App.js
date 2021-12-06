@@ -6,6 +6,7 @@ import Account from "./components/pages/Account";
 import AccountLogin from "./components/pages/AccountLogin";
 import AccountRegister from "./components/pages/AccountRegister";
 import Home from "./components/pages/Home";
+import PrivateRoute from "./components/routing/PrivateRoute";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
         <Navbar />
         <div className="container mt-4">
           <Switch>
-            <Route exact path="/" component={Home} />
+            <PrivateRoute exact path="/" component={Home} />
             <Route exact path="/account" component={Account} />
             <Route path="/account/login" component={AccountLogin} />
             <Route path="/account/register" component={AccountRegister} />
